@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Магазин игр</title>
+<link rel="stylesheet" href="css/store.css">
+</head>
+<body>
+
+<header>
+  <span class="logo">🎮</span>
+  <h1>Магазин игр</h1>
+  <div class="search">
+    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="search" placeholder="Поиск..." autocomplete="off">
+  </div>
+</header>
+
+<div class="cats" id="cats"></div>
+<div class="grid" id="grid"></div>
+
+<div id="player">
+  <div id="bar">
+    <div class="name" id="pname">Игра</div>
+    <button id="reloadBtn" title="Перезагрузить">⟳ Заново</button>
+    <button class="ext" id="extBtn" title="Открыть в новой вкладке">↗ Новая вкладка</button>
+    <button id="fsBtn" title="Во весь экран">⛶</button>
+    <button class="close" id="closeBtn">✕ Закрыть</button>
+  </div>
+  <div id="wrap">
+    <div id="loading"><div><div class="spinner"></div>Загрузка игры...</div></div>
+    <iframe id="frame" allow="autoplay;fullscreen;gamepad;microphone;camera;xr-spatial-tracking"
+            allowfullscreen></iframe>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="js/games.js"></script>
+<script src="js/store.js"></script>
+</body>
+</html>
